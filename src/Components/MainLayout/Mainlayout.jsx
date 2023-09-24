@@ -6,7 +6,6 @@ const Mainlayout = () => {
         <div>
             <h1>Hello World</h1>
             <Outlet></Outlet>
-            
         </div>
     );
 };
