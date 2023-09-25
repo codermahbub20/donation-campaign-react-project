@@ -21,7 +21,7 @@ const Donation = () => {
             donation.slice(0,datalength).map(sub => <SubDonation key={sub.id} sub={sub}></SubDonation>)
         }
          <div className={datalength === donation.length && 'hidden' || "flex mt-5 md:ml-[490px]"}>
-                <button className="px-3 rounded-xl text-xl text-white py-3 bg-green-700" onClick={() => setDatalength(donation.length)}>See All</button>
+                <button className="px-3 rounded-xl text-xl   text-white py-3 bg-green-700" onClick={() => setDatalength(donation.length)}>See All</button>
             </div>
             
         </div>

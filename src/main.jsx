@@ -31,7 +31,8 @@ import ErrorPage from './Components/ErrorPage/ErrorPage';
         },
         {
           path: "/statistics",
-          element: <Statistics></Statistics>
+          element: <Statistics></Statistics>,
+          loader: ()=> fetch(`/donation.json`)
         },
         {
           path: "/cardsData/:id",
