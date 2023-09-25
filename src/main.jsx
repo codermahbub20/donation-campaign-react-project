@@ -8,9 +8,9 @@ import './index.css'
   } from "react-router-dom";
 import Mainlayout from './Components/MainLayout/Mainlayout';
 import Home from './Components/Home/Home';
-import Domain from './Components/Domain/Domain';
 import Statistics from './Components/Statistics/Statistics';
 import Viewdetails from './Components/ViewDetails/Viewdetails';
+import Donation from './Components/Domain/Donation';
 
 
   const router = createBrowserRouter([
@@ -25,7 +25,7 @@ import Viewdetails from './Components/ViewDetails/Viewdetails';
         },
         {
           path: "/donation",
-          element: <Domain></Domain> 
+          element: <Donation></Donation>
         },
         {
           path: "/statistics",

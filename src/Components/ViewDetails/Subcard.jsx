@@ -1,20 +1,40 @@
 import { Link } from "react-router-dom";
+import swal from "sweetalert";
 
 
 const Subcard = ({ card }) => {
-    const { id, picture, card_bg, category, text_bg, category_bg, title, description } = card || {};
+    const { id, picture,  text_bg,  title, description } = card || {};
 
         const handleAddDonation = () =>{
-            console.log(card)
+            // console.log(card)
             const addedDonationarray = [];
+
             const donationItem = JSON.parse(localStorage.getItem('donation'));
 
             if(!donationItem){
+
                 addedDonationarray.push(card);
                 localStorage.setItem('donation',JSON.stringify(addedDonationarray));
+
+                swal("Good job!", "Successfully Donate ", "success", {
+                    button: "Aww yess!",
+                  });
+                  
             }else{
-                addedDonationarray.push(...donationItem,card);
-                localStorage.setItem('donation',JSON.stringify(addedDonationarray));
+
+                const isExist = donationItem.find(card => card.id === id);
+
+                if(!isExist){
+                    addedDonationarray.push(... donationItem , card);
+                    localStorage.setItem('donation',JSON.stringify(addedDonationarray));
+                    swal("Good job!", "Successfully Donate ", "success", {
+                        button: "Aww yess!",
+                      });
+                }else{
+                    swal("Error!", "No Duplicate time donate!", "error", {
+                        button: "Okay!",
+                      });
+                }
             }
             
         }
