@@ -12,6 +12,7 @@ import Domain from './Components/Domain/Domain';
 import Statistics from './Components/Statistics/Statistics';
 import Viewdetails from './Components/ViewDetails/Viewdetails';
 
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -23,7 +24,7 @@ import Viewdetails from './Components/ViewDetails/Viewdetails';
           loader: ()=> fetch(`/donation.json`)
         },
         {
-          path: "/domain",
+          path: "/donation",
           element: <Domain></Domain> 
         },
         {

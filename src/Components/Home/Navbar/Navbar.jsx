@@ -20,12 +20,12 @@ const Navbar = () => {
                         </NavLink>
 
                         <NavLink
-                            to="/domain"
+                            to="/donation"
                             className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "text-red-500 lg:text-xl lg:font-bold underline" : ""
                             }
                         >
-                            Domain
+                            Donation
                         </NavLink>
                         <NavLink
                             to="/statistics"
