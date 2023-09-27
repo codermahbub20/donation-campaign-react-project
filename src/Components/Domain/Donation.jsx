@@ -16,11 +16,11 @@ const Donation = () => {
     console.log(donation)
 
     return (
-        <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 w-9/12 mx-auto">
+        <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 md:w-9/12 md:mx-auto">
         {
             donation.slice(0,datalength).map(sub => <SubDonation key={sub.id} sub={sub}></SubDonation>)
         }
-         <div className={datalength === donation.length && 'hidden' || "flex mt-5 md:ml-[490px]"}>
+         <div className={ donation.length <= datalength && 'hidden' || "flex mt-5 md:ml-[490px]"}>
                 <button className="px-3 rounded-xl text-xl   text-white py-3 bg-green-700" onClick={() => setDatalength(donation.length)}>See All</button>
             </div>
             
