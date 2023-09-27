@@ -37,7 +37,7 @@ const Statistics = () => {
     { name: "Donation", value: parseFloat(donationPercentage) },
   ];
 
-  // Custom colors for the pie chart slices
+ 
   const colors = ["#FF444A", "#00C49F"];
 
   return (
@@ -57,10 +57,11 @@ const Statistics = () => {
               <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
             ))}
           </Pie>
-          <Legend 
+          <Legend  
             verticalAlign="bottom"
-            height={36}
-            iconSize={18}
+            height={40}
+    
+            iconSize={20}
             formatter={(value) => `${value}%`}
           />
         </PieChart>

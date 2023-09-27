@@ -1,13 +1,18 @@
 import { Link } from "react-router-dom";
 
 
+
 const ErrorPage = () => {
     return (
-        <div className="h-[100vh] flex justify-center items-center ">
-            <div className="text-3xl">
-            <h1 className="text-center">Oops!</h1>
-            <p>Sorry, an unexpected error has occurred.</p>
-            <Link to="/"><button className="btn btn-primary mt-3">Go Back</button></Link>
+        <div className="hero w-full min-h-screen" style={{ backgroundImage: 'url(https://webartdevelopers.com/blog/wp-content/uploads/2018/09/404-SVG-Animated-Page-Concept.png)' }}>
+            <div>
+            <div className="hero-content  text-center text-neutral-content">
+                <div className="max-w-md">
+                    <h1 className="mb-5 text-5xl font-bold text-black">Page Not Found</h1>
+                    <p className="mb-5 text-xl text-black">This Is A Error Message.</p>
+                   <Link to="/"> <button className="btn btn-primary">Go Back Home</button></Link>
+                </div>
+            </div>
             </div>
         </div>
     );

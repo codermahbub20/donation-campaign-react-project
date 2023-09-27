@@ -11,8 +11,8 @@ const Card = ({ card }) => {
                 <div className={`card ${card_bg} shadow-xl`}>
                     <figure><img className="w-full h-48 rounded-xl " src={picture} alt="Shoes" /></figure>
                     <div className="card-body">
-                        <p className={` text-${text_bg} w-fit p-1 font-normal rounded-xl  ${category_bg} card-title`}>{category}</p>
-                        <h1 className={`text-xl  text-${text_bg} font-bold`}>{title}</h1>
+                        <p className={` text-${text_bg}  w-fit p-1 font-normal rounded-xl  ${category_bg} card-title`}>{category}</p>
+                        <h1 className={`text-xl  text-${text_bg}  font-bold`}>{title}</h1>
                     </div>
                 </div>
             </Link>
