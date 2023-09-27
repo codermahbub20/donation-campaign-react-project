@@ -14,7 +14,9 @@ const SubDonation = ({ sub }) => {
                     <h3 className="card-title ">{title}</h3>
                     <h1 className="text-xl md:font-bold">${price}.00</h1>
                     <div className="card-actions ">
+
                         <Link to={`/cardsData/${id}`}><button className={`btn   bg-${text_bg} border-none`}>View Details</button></Link>
+                        
                     </div>
                 </div>
             </div>
